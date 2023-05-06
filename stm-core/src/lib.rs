@@ -116,7 +116,10 @@
 //!
 
 extern crate parking_lot;
+extern crate archery;
+extern crate rpds;
 
+mod tqueue;
 mod transaction;
 mod tvar;
 mod result;
@@ -125,6 +128,7 @@ mod result;
 mod test;
 
 pub use tvar::TVar;
+pub use tqueue::TQueue;
 pub use transaction::Transaction;
 pub use transaction::TransactionControl;
 pub use result::*;
