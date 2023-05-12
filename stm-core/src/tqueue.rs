@@ -12,7 +12,7 @@ use crate::{StmError, TVar, Transaction};
 use archery::shared_pointer::kind::ArcK;
 use rpds::List;
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct TQueue<A: Sync + Send + 'static> {
     read: TVar<rpds::List<Arc<A>, ArcK>>,
     write: TVar<rpds::List<Arc<A>, ArcK>>,
